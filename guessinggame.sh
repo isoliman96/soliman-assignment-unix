@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 # Islam Soliman ...
-
+# A function that suits needs ...
 function guessing {
-echo  -n "Guess How many files that I Hold Here? "
+echo  -n "What is  your guess... "
 read guess
 actual=$(eval ls | wc -l)
 while [[ $guess -ne $actual ]]
@@ -12,4 +12,9 @@ do
 done
 echo "Congratulations, You've guessed right ..."
 }
+echo "Let's play a game"
+echo "A guessing game..."
+echo "You're gonna guess how many file in this directory..."
+echo "so let's start ..."
+# Calling the function ...
 guessing
