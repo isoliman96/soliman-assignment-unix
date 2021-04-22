@@ -7,7 +7,12 @@ read guess
 actual=$(eval ls | wc -l)
 while [[ $guess -ne $actual ]]
 do
-	echo -n "Your guess is wrong, please enter another guess: "
+	if [[ $guess -gt $actual ]]
+	then
+		echo -n "Your guess is too high, please enter another guess: "
+	else
+		echo -n "Your guess is too low, please enter another guess: "
+	fi
 	read guess
 done
 echo "Congratulations, You've guessed right ..."
